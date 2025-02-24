@@ -1,4 +1,4 @@
-# Script to enumerate web servers with rate limiting (429 response)
+# Script to enumerate directories on web servers with rate limiting (429 response)
 # On lockout, this tool waits a specified amount of time to enumerate the next entries from a word list.
 # Positive status codes are highlighted in different colours. 
 
@@ -81,8 +81,8 @@ def enumerate_directories(url, wordlist_path, delay, threads, output_file):
 
 if __name__ == "__main__":
     if len(sys.argv) != 6:
-        print("Usage: python 429-paused-enumeration.py <URL> <WORDLIST> <DELAY_IN_SECONDS> <THREADS> <OUTPUT_FILE>")
-        print("Example: python 429-paused-enumeration.py http://example.xyz wordlist.txt 10 10 results.txt")
+        print("Usage: python 429-paused-dir-enumeration.py <URL> <WORDLIST> <DELAY_IN_SECONDS> <THREADS> <OUTPUT_FILE>")
+        print("Example: python 429-paused-dir-enumeration.py http://example.xyz wordlist.txt 10 10 results.txt")
     else:
         url = sys.argv[1]
         wordlist_path = sys.argv[2]
